@@ -7,6 +7,6 @@ An app which displays the hottest IT news in ycombinator
   - Visual Studio Code
   - Android Studio
   
-##Main Page
+## Main Page
 ![News List](screenshots/newslist.jpg)
 
