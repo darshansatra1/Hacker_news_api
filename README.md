@@ -7,6 +7,9 @@ An app which displays the hottest IT news in ycombinator
   - Visual Studio Code
   - Android Studio
   
-## Main Page
-![News List](screenshots/newslist.jpg)
+## Some Screenshots
 
+<p>
+  <h1>Main Page</h1>
+  <img alt="News List" src="screenshots/newslist.jpg" height = "800px"> 
+</p>
