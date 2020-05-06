@@ -14,20 +14,34 @@ class ItemModel {
   int score;
   String title;
   int descendants;
+  ItemModel(
+      {this.id,
+      this.deleted,
+      this.type,
+      this.by,
+      this.time,
+      this.text,
+      this.dead,
+      this.parent,
+      this.kids,
+      this.url,
+      this.score,
+      this.title,
+      this.descendants});
 
   ItemModel.fromJson(Map<String, dynamic> item)
-      : id = item['id'],
+      : id = item['id'] ?? 23069023,
         deleted = item['deleted'] ?? false,
         type = item['type'] ?? '',
-        by = item['by'],
-        time = item['time'],
+        by = item['by'] ?? 'No author found',
+        time = item['time'] ?? 0,
         text = item['text'] ?? '',
         dead = item['dead'] ?? false,
-        parent = item['parent'],
+        parent = item['parent'] ?? 0,
         kids = item['kids'] == null ? [] : item['kids'].cast<int>(),
         url = item['url'],
         score = item['score'] ?? 0,
-        title = item['title'],
+        title = item['title'] ?? '',
         descendants = item['descendants'] ?? 0;
 
   ItemModel.fromDb(Map<String, dynamic> item)

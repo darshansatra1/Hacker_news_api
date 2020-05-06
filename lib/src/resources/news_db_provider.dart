@@ -18,7 +18,7 @@ class NewsDbProvider implements Source, Cache {
 
   void init() async {
     Directory dir = await getApplicationDocumentsDirectory();
-    String path = join(dir.path, 'items.db');
+    String path = join(dir.path, 'items1.db');
     db = await openDatabase(path, version: 1,
         onCreate: (Database newDb, int version) {
       newDb.execute("""
@@ -30,7 +30,7 @@ class NewsDbProvider implements Source, Cache {
             time INTEGER,
             text TEXT,
             dead INTEGER,
-            parent TEXT,
+            parent INTEGER,
             kids BLOB,
             url TEXT,
             score INTEGER,

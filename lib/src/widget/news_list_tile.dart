@@ -25,18 +25,19 @@ class NewsListTile extends StatelessWidget {
             if (!itemSnapshot.hasData) {
               return LoadingContainer();
             }
-            return buildTile(itemSnapshot.data);
+            return buildTile(itemSnapshot.data, context);
           },
         );
       },
     );
   }
 
-  Widget buildTile(ItemModel item) {
+  Widget buildTile(ItemModel item, BuildContext context) {
     return Card(
       elevation: 2,
       color: Colors.transparent,
       child: ListTile(
+        onTap: () => Navigator.pushNamed(context, '/id', arguments: item),
         title: Text(
           item.title,
           style:

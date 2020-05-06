@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hacker_news/src/bloc/news_bloc.dart';
@@ -8,7 +9,6 @@ class NewsList extends StatelessWidget {
   NewsBloc get newsBloc => GetIt.I<NewsBloc>();
   @override
   Widget build(BuildContext context) {
-    newsBloc.fetchTopIds();
     return SafeArea(
       child: Scaffold(
         body: NestedScrollView(
@@ -50,6 +50,7 @@ class NewsList extends StatelessWidget {
                 }
                 return Refresh(
                   child: ListView.builder(
+                    dragStartBehavior: DragStartBehavior.down,
                     itemCount: snapshot.data.length,
                     itemBuilder: (context, index) {
                       newsBloc.fetchItem(snapshot.data[index]);

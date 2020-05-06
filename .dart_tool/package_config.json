@@ -74,6 +74,12 @@
       "languageVersion": "2.3"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///C:/flutter_windows_v1.9.1+hotfix.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.5"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///C:/flutter_windows_v1.9.1+hotfix.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.6",
       "packageUri": "lib/",
@@ -212,7 +218,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-05-02T12:10:01.178066Z",
+  "generated": "2020-05-04T16:30:50.202467Z",
   "generator": "pub",
   "generatorVersion": "2.9.0-3.0.dev.flutter-94178e920e"
 }
